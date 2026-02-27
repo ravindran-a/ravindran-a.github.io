@@ -9,23 +9,24 @@
 
 :root {
   --bg:          #08080e;
-  --bg-alt:      #0e0e18;
+  --bg-alt:      #0e0e1b;
   --surface:     #13131f;
-  --surface-2:   #1a1a2e;
-  --border:      rgba(255, 255, 255, 0.07);
-  --border-hover:rgba(201, 168, 76, 0.35);
+  --surface-2:   #1b1b2e;
+  --border:      rgba(255, 255, 255, 0.09);
+  --border-hover:rgba(201, 168, 76, 0.4);
 
   --gold:        #c9a84c;
-  --gold-light:  #e2c97e;
+  --gold-light:  #dfc47a;
   --gold-dim:    rgba(201, 168, 76, 0.15);
   --gold-glow:   rgba(201, 168, 76, 0.08);
 
-  --purple:      #7c6bdb;
-  --purple-dim:  rgba(124, 107, 219, 0.12);
+  --purple:      #9080e0;
+  --purple-light: #b4aaee;
+  --purple-dim:  rgba(144, 128, 224, 0.14);
 
-  --text:        #e8e8f0;
-  --text-2:      #9898b0;
-  --text-3:      #606078;
+  --text:        #eeeef6;
+  --text-2:      #b4b4cc;
+  --text-3:      #8a8aaa;
 
   --font-sans:   'Inter', system-ui, -apple-system, sans-serif;
   --font-serif:  'Playfair Display', Georgia, serif;
@@ -126,7 +127,7 @@ img { display: block; max-width: 100%; }
   padding: 8px 14px;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-2);
+  color: var(--text-3);
   border-radius: var(--radius-sm);
   transition: color var(--transition), background var(--transition);
   letter-spacing: 0.02em;
@@ -290,9 +291,9 @@ img { display: block; max-width: 100%; }
 
 .hero-title {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  font-weight: 400;
-  color: var(--text-2);
-  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.03em;
   margin-bottom: 12px;
   opacity: 0;
   transform: translateY(20px);
@@ -301,7 +302,7 @@ img { display: block; max-width: 100%; }
 
 .hero-tagline {
   font-size: 1rem;
-  color: var(--text-3);
+  color: var(--text-2);
   margin-bottom: 40px;
   opacity: 0;
   transform: translateY(20px);
@@ -496,7 +497,7 @@ img { display: block; max-width: 100%; }
   color: var(--text-2);
   margin-bottom: 20px;
   font-size: 1.05rem;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 .about-text p strong { color: var(--text); font-weight: 600; }
 .about-text p:last-child { margin-bottom: 0; }
@@ -723,11 +724,11 @@ img { display: block; max-width: 100%; }
   gap: 10px;
 }
 .timeline-bullets li {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-2);
   padding-left: 18px;
   position: relative;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 .timeline-bullets li::before {
   content: '';
@@ -956,12 +957,12 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 12px 40px rgba(0,0,0,0.25);
 }
 .cert-card-inprogress {
-  border-color: rgba(124, 107, 219, 0.25);
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(124,107,219,0.05) 100%);
+  border-color: rgba(144, 128, 224, 0.28);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(144,128,224,0.06) 100%);
 }
 .cert-card-inprogress:hover {
-  border-color: rgba(124, 107, 219, 0.5);
-  box-shadow: 0 12px 40px rgba(124, 107, 219, 0.08);
+  border-color: rgba(144, 128, 224, 0.55);
+  box-shadow: 0 12px 40px rgba(144, 128, 224, 0.1);
 }
 
 .cert-header {
@@ -978,7 +979,7 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--purple);
+  color: var(--purple-light);
 }
 
 .cert-status {
@@ -993,15 +994,15 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
 }
 .cert-status-inprogress {
-  background: rgba(124, 107, 219, 0.12);
-  border: 1px solid rgba(124, 107, 219, 0.3);
-  color: #a99ee8;
+  background: rgba(144, 128, 224, 0.13);
+  border: 1px solid rgba(144, 128, 224, 0.32);
+  color: var(--purple-light);
 }
 
 .cert-status-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--purple);
+  background: var(--purple-light);
   animation: pulse 1.8s ease-in-out infinite;
 }
 @keyframes pulse {
@@ -1019,7 +1020,7 @@ img { display: block; max-width: 100%; }
 
 .cert-issuer {
   font-size: 0.85rem;
-  color: var(--purple);
+  color: var(--purple-light);
   font-weight: 500;
   margin-bottom: 14px;
 }
@@ -1039,17 +1040,17 @@ img { display: block; max-width: 100%; }
 .cert-tags span {
   padding: 4px 12px;
   background: var(--bg);
-  border: 1px solid rgba(124, 107, 219, 0.2);
+  border: 1px solid rgba(144, 128, 224, 0.25);
   border-radius: 99px;
   font-size: 0.73rem;
-  color: #a99ee8;
+  color: var(--purple-light);
   font-weight: 500;
 }
 
-/* Stack Overflow icon colour */
+/* Stack Overflow icon colour — warm amber, harmonises with gold */
 .contact-card-icon-so {
-  background: rgba(244, 128, 36, 0.12) !important;
-  color: #f48024 !important;
+  background: rgba(220, 160, 60, 0.14) !important;
+  color: #d4923a !important;
 }
 
 /* ============================================================
